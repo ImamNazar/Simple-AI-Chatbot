@@ -1,6 +1,6 @@
 // JavaScript Document
 // Replace 'API_KEY' with a valid OpenAI API key obtained from the OpenAI website
-const API_KEY = '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';
+const API_KEY = 'API_KEY';
 
 $(document).ready(function() {
   // Show a greeting message when the page loads
