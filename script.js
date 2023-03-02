@@ -1,6 +1,6 @@
 // JavaScript Document
 // Replace 'API_KEY' with a valid OpenAI API key obtained from the OpenAI website
-const API_KEY = 'API_KEY';
+const API_KEY = '<API_KEY>';
 
 $(document).ready(function() {
   // Show a greeting message when the page loads
@@ -45,3 +45,33 @@ $(document).ready(function() {
     $('#prompt').val('');
   });
 });
+
+
+//spinner animation for the button
+const button = document.querySelector('.chat-input button');
+const input = document.querySelector('.chat-input input[type="text"]');
+const chatHistory = document.querySelector('.chat-history');
+
+button.addEventListener('click', function() {
+  if (input.value !== '') {
+    button.classList.add('loading');
+    // Call function to make request
+    makeRequest(function(response) {
+      // Add response to chat history
+      const message = document.createElement('p');
+      message.textContent = response;
+      chatHistory.appendChild(message);
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+      // Clear input and remove loading class
+      input.value = '';
+      button.classList.remove('loading');
+    });
+  }
+});
+
+function makeRequest(callback) {
+  // Simulate a request delay
+  setTimeout(function() {
+    callback('Is there anything else you would want to know?');
+  }, 10000);
+}

@@ -42,12 +42,12 @@ body {
 }
 
 .chat-header h1 {
-    font-size: 24px;
+    font-size: 70px;
     color: #444;
 }
 
 .chat-history {
-    height: 500px;
+    height: 750px;
     padding: 10px;
     overflow-y: scroll;
     animation: fade-in 1s ease;
@@ -97,9 +97,10 @@ body {
     border-radius: 5px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 15px;
     color: #444;
     background-color: #f2f2f2;
+    font-family: monospace;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -108,13 +109,14 @@ body {
 }
 
 .chat-input button {
-    padding: 10px 20px;
+    padding: 12px 22px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
+    font-family: monospace;
     transition: background-color 0.2s ease;
 }
 
@@ -125,6 +127,28 @@ body {
 .chat-input button:active {
     background-color: #2f6e2f;
 }
+
+
+.chat-input button.loading {
+    position: relative;
+  }
+  
+  .chat-input button.loading:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top-color: #4CAF50;
+    animation: spin 1s linear infinite;
+  }
+  
+
 
 @media screen and (max-width: 600px) {
     .container {
@@ -137,3 +161,10 @@ body {
         margin-bottom: 10px;
     }
 }
+
+
+
+  @keyframes spin {
+    to {transform: rotate(360deg);}
+  }
+  
