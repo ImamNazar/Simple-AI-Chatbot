@@ -2,138 +2,138 @@
 /* CSS Document */
 
 *{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
 body {
-font-family: monospace;
-background-image: url("https://i.redd.it/bpxxqqvps4h91.gif")
+    font-family: monospace;
+    background-image: url("https://i.redd.it/bpxxqqvps4h91.gif");
 }
 
 .container {
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .chat-window {
-border: 1px solid #ccc;
-border-radius: 10px;
-overflow: hidden;
-animation: slide-in 1s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: slide-in 1s ease;
 }
 
 @keyframes slide-in {
-from {
-transform: translateX(-100%);
-}
-to {
-transform: translateX(0);
-}
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .chat-header {
-background-color: #f2f2f2;
-padding: 10px;
-text-align: center;
-border-bottom: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
 .chat-header h1 {
-font-size: 24px;
-color: #444;
+    font-size: 24px;
+    color: #444;
 }
 
 .chat-history {
-height: 300px;
-padding: 10px;
-overflow-y: scroll;
-animation: fade-in 1s ease;
+    height: 500px;
+    padding: 10px;
+    overflow-y: scroll;
+    animation: fade-in 1s ease;
 }
 
 @keyframes fade-in {
-from {
-opacity: 0;
-}
-to {
-opacity: 1;
-}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .chat-history p {
-margin-bottom: 10px;
-padding: 10px;
-border-radius: 5px;
-background-color: #f2f2f2;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
 }
 
 .chat-history p:last-child {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .chat-input {
-display: flex;
-align-items: center;
-padding: 10px;
-animation: slide-up 1s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    animation: slide-up 1s ease;
 }
 
 @keyframes slide-up {
-from {
-transform: translateY(100%);
-}
-to {
-transform: translateY(0);
-}
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .chat-input input[type="text"] {
-flex-grow: 1;
-padding: 10px;
-border-radius: 5px;
-border: none;
-outline: none;
-font-size: 16px;
-color: #444;
-background-color: #f2f2f2;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #444;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .chat-input input[type="text"]::placeholder {
-color: #999;
+    color: #999;
 }
 
 .chat-input button {
-padding: 10px 20px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-margin-left: 10px;
-transition: background-color 0.2s ease;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
 }
 
 .chat-input button:hover {
-background-color: #3e8e41;
+    background-color: #3e8e41;
 }
 
 .chat-input button:active {
-background-color: #2f6e2f;
+    background-color: #2f6e2f;
 }
 
 @media screen and (max-width: 600px) {
-.container {
-padding: 10px;
-}
-.chat-input {
-flex-wrap: wrap;
-}
-.chat-input input[type="text"] {
-margin-bottom: 10px;
-}
+    .container {
+        padding: 10px;
+    }
+    .chat-input {
+        flex-wrap: wrap;
+    }
+    .chat-input input[type="text"] {
+        margin-bottom: 10px;
+    }
 }
